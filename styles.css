@@ -29,4 +29,37 @@ body {
   nav ul li a:hover {
     color: #ff6600;
   }
-  
+
+  #carousel{
+  position: relative;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  }
+
+  #carousel img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  #carousel button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(116, 120, 11);
+    color: rgb(32, 3, 51);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  #carousel #back{
+    left: 1px;
+  }
+
+  #carousel #next{
+    right: 10px;
+  }

@@ -1,4 +1,4 @@
-const imagenes=['imagenes/argentina.png','imagenes/playa.jpg','imagenes/chile.png'];
+const imagenes=['imagenes/argentina.png','imagenes/playa.jpg','imagenes/ciudad_chile.jpg','imagenes/riocristo.webp'];
 let n=0;
 const caroucel=document.getElementById('carousel-image');
 
