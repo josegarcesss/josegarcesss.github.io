@@ -1,0 +1,16 @@
+#brasil{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px;
+    padding: 0px 10px;
+    background: gainsboro;
+    color: darkgreen;
+    justify-items: center;
+}
+.imagen-colum{
+    max-width: 60%;
+    height: auto;
+    padding-left: 20%;
+    padding-bottom: 10px;
+      
+}
