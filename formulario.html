@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <section>
+        <h2>Formulario de contacto</h2>
+    <form id="formulario">
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required maxlength="30">
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="mensaje">Dudas/Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" required maxlength="300"></textarea>
+        
+        <button type="submit">Enviar</button>
+    </form>
+    <div id="form-mensaje"></div>
+    </section>
+</main>
+
+<script src="form-validacion.js"></script>
+</body>
+</html>
