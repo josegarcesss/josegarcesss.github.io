@@ -1,16 +1,42 @@
-#brasil{
+body{
+    background-image:url(https://wallpapercave.com/wp/wp2757967.gif) ;
+
+}
+#destinos{
     display: flex;
-    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    opacity: 0.85;
+}
+.columnas{
+    text-align: center;
     margin: 10px 5px;
     padding: 0px 10px;
-    background: gainsboro;
-    color: darkgreen;
-    justify-items: center;
+    border:solid 2px black;
+}
+#brasil{
+    background: lightgreen;
+    color: black;
+}
+
+#argentina{
+background: rgb(158, 236, 236);
 }
 .imagen-colum{
     max-width: 60%;
-    height: auto;
-    padding-left: 20%;
-    padding-bottom: 10px;
-      
+    height: auto;      
+}
+article{
+    color: aliceblue;
+}
+#regresar{
+    display: flex;
+    justify-content: center;
+}
+
+#regresar{
+    text-decoration: none;
+    background-color: black;
+    color: beige;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 5px;
 }
