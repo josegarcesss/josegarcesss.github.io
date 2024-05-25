@@ -1,7 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
-    background-image: url(https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fasset.gecdesigns.com%2Fimg%2Fwallpapers%2Fblue-purple-beautiful-scenery-ultra-hd-wallpaper-4k-sr10012421-1706505497434-cover.webp&sp=1716609024T6a727f93888fda56e3ffe703377aeed6cb5270befb3c1ff0ea0e647dc0092ed2);
+    background-color: black;
 }
 header{
     margin: 10px;
