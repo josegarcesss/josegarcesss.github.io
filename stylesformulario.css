@@ -1,0 +1,56 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fasset.gecdesigns.com%2Fimg%2Fwallpapers%2Fblue-purple-beautiful-scenery-ultra-hd-wallpaper-4k-sr10012421-1706505497434-cover.webp&sp=1716609024T6a727f93888fda56e3ffe703377aeed6cb5270befb3c1ff0ea0e647dc0092ed2);
+}
+header{
+    margin: 10px;
+    padding-right:  20px;
+   background-color: brown;
+}
+a{    
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: #ff6600;
+  }
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 830px){
+#formulario{
+    display: flex;
+    background-color: aquamarine;
+    padding: 20px;
+}
+}
+
+h2{
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 3px 3px black;
+}
+
+
+@media (max-width: 829px){
+    #formulario{
+        display: flex;
+        flex-direction: column;
+        background-color: lightgray;
+        padding: 20px;
+    }
+    }
+#formulario{
+    margin-top: 90px;
+    border-style: inset;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.elementofomr{
+    display: inline-block;
+}
