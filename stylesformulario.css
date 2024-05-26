@@ -3,54 +3,56 @@ body{
     flex-direction: column;
     background-color: black;
 }
-header{
-    margin: 10px;
-    padding-right:  20px;
-   background-color: brown;
-}
-a{    
-    text-decoration: none;
-    color: black;
-}
-a:hover {
-    color: #ff6600;
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: brown;
   }
-nav{
-    display: flex;
-    justify-content: center;
-}
+  
+  
+  li {
+    display: inline-block;
+    align-content: space-around;
+    font-size: 20px;
+    margin: 0 20px;
+    text-decoration: none;
+  }
+  a{
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+  }
+  
+ a:hover {
+    padding: 2px;
+    color: #ff6600;
+    border-style: solid;
+  }
 
-@media (min-width: 830px){
-#formulario{
-    display: flex;
-    background-color: aquamarine;
-    padding: 20px;
-}
-}
 
 h2{
+    margin-top: 10%;
     color: whitesmoke;
+    font-size: 40px;
     text-align: center;
-    text-shadow: 3px 3px black;
+    text-shadow: 2px 2px brown;
 }
 
 
-@media (max-width: 829px){
-    #formulario{
-        display: flex;
-        flex-direction: column;
-        background-color: lightgray;
-        padding: 20px;
-    }
-    }
+
 #formulario{
-    margin-top: 90px;
-    border-style: inset;
     display: flex;
-    position: relative;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;    
+    background-color: brown;
+    color: aliceblue;
+    border-style: inset;
+    margin: 12% 10% 10% 10%;
+    padding: 10px;
 }
 
 .elementofomr{
     display: inline-block;
+    margin: 2px;
 }
