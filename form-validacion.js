@@ -11,6 +11,7 @@ const mensaje = document.getElementById('mensaje').value.trim();
 
 let esvalido=true;
 
+limpiarErrores();
 if(!validarnombre(nombre)){
     error('Ingrese un nombre (no mayor a 30 caracteres)')
     esvalido=false;
@@ -28,6 +29,7 @@ if(!validarmensaje(mensaje)){
 
 if(esvalido){
     displaySuccess(nombre, mail, mensaje);
+    limpiarFormulario();
 }
 });
 
@@ -70,14 +72,15 @@ function displaySuccess(nombre, mail, mensaje) {
     n.appendChild(mensajeElemento);
 
     formMensaje.appendChild(n);
-    limpiarFormulario()
+    limpiarFormulario();
 }
 
-function limpiarFormulario() {
-   if(esvalido=true){
-    
+function limpiarFormulario(){
     formulario.reset();
+}
 
-   }}
-
+function limpiarErrores() {
+    const formMensaje = document.getElementById('form-mensaje');
+    formMensaje.innerHTML = ''; 
+}
 });
