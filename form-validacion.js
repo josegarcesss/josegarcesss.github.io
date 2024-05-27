@@ -1,32 +1,35 @@
-document.getElementById('formulario').addEventListener('submit', function(event){
-Event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
 
-const formulario=dosument.getElementById('fomulario')
+
+document.getElementById('formulario').addEventListener('submit', function(event){
+event.preventDefault();
+
+const formulario = document.getElementById('formulario')
 formulario.innerHTML='';
 
-const nombre=document.getElementById('nombre').ariaValueMax.trim();
-const mail=document.getElementById('mail').ariaValueMax.trim();
-const mensaje=document.getElementById('mensaje').ariaValueMax.trim();
+const nombre = document.getElementById('nombre').value.trim();
+const mail = document.getElementById('mail').value.trim()
+const mensaje = document.getElementById('mensaje').value.trim()
 
 let esvalido=true
 
 if(!validarnombre(nombre)){
-    displayError('Ingrese un nombre (no mayor a 30 caracteres)')
+    error('Ingrese un nombre (no mayor a 30 caracteres)')
     esvalido=false;
 }
 
 if(!validarmail(mail)){
-    displayError('El mail no es valido.)')
+    error('El mail no es valido.)')
     esvalido=false;
 }
 
 if(!validarmensaje(mensaje)){
-    displayError('Ingrese un mensaje o duda(no mayor a 300 caracteres)')
+    error('Ingrese un mensaje o duda(no mayor a 300 caracteres)')
     esvalido=false;
 }
 
 if(esvalido){
-    displaSucces(nombre,mail,mensaje);
+    displaySuccess(nombre, mail, mensaje);
 }
 });
 
@@ -35,7 +38,7 @@ function validarnombre(nombre){
 }
 
 function validarmail(mail){
-    const emailRegex = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/';
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(mail);
 }
 
@@ -45,28 +48,29 @@ function validarmensaje(mensaje){
 }
 
 function error(mensaje){
-    const formMensaje =document.getElementById('form-mensaje');
-    const errorElement =document.getElementById('p');
-    errorElement.style.color="red";
-    errorElement.textContent=mensaje;
+    const formMensaje = document.getElementById('form-mensaje');
+    const errorElement = document.createElement('p');
+    errorElement.style.color = "red";
+    errorElement.textContent = mensaje;
     formMensaje.appendChild(errorElement);
 }
 
-function displaySucces(nombre, mail, mensaje){
-    const formMensaje =document.getElementById('form-mensaje');
-    const succesElement=document.createElement('div');
+function displaySuccess(nombre, mail, mensaje) {
+    const formMensaje = document.getElementById('form-mensaje');
+    const successElement = document.createElement('div');
 
     const nombreElemento =document.createElement('p');
-    nombreElemento.textContent='Nombre: ${name}';
-    succesElement.appendChild(mensajeElemento);
+    nombreElemento.textContent= 'Nombre: ' + nombre;
+    succesElement.appendChild(nombreElemento);
 
     const mailElemento = document.createElement('p');
-    mailElemento.textContent = 'Email: ${email}';
+    mailElemento.textContent = 'Email: ' + mail;
     successElement.appendChild(mailElemento);
 
     const mensajeElemento = document.createElement('p');
-    mensajeElemento.textContent = 'Mensaje: ${message}';
+    mensajeElemento.textContent = 'Mensaje: ' + mensaje;
     successElement.appendChild(mensajeElemento);
 
     form-mensaje.appendChild(successElement);
 }
+});
