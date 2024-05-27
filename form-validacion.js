@@ -5,13 +5,12 @@ document.getElementById('formulario').addEventListener('submit', function(event)
 event.preventDefault();
 
 const formulario = document.getElementById('formulario')
-formulario.innerHTML='';
-
+//formulario.innerHTML='';
 const nombre = document.getElementById('nombre').value.trim();
-const mail = document.getElementById('mail').value.trim()
-const mensaje = document.getElementById('mensaje').value.trim()
+const mail = document.getElementById('mail').value.trim();
+const mensaje = document.getElementById('mensaje').value.trim();
 
-let esvalido=true
+let esvalido=true;
 
 if(!validarnombre(nombre)){
     error('Ingrese un nombre (no mayor a 30 caracteres)')
@@ -71,6 +70,6 @@ function displaySuccess(nombre, mail, mensaje) {
     mensajeElemento.textContent = 'Mensaje: ' + mensaje;
     successElement.appendChild(mensajeElemento);
 
-    form-mensaje.appendChild(successElement);
+    formMensaje.appendChild(successElement);
 }
 });
