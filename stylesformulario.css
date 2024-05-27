@@ -57,11 +57,19 @@ h2{
 
 .elementofomr{
   display: inline-block;
-margin: 20px;
+}
+#mail {
+  margin-left: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+ 
+#botonenviar{
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
+#nombre{
+  margin-top: 10px;
 
-#mensaje{
-  display: inline-block;
-  height: auto;
 }

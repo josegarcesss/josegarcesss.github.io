@@ -50,7 +50,7 @@ function validarmensaje(mensaje){
 function error(mensaje){
     const formMensaje = document.getElementById('form-mensaje');
     const errorElemento = document.createElement('p');
-    errorElemento.style.color = "green";
+    errorElemento.style.color = "white";
     errorElemento.textContent = mensaje;
     formMensaje.appendChild(errorElemento);
 }
