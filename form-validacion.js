@@ -56,20 +56,29 @@ function error(mensaje){
 
 function displaySuccess(nombre, mail, mensaje) {
     const formMensaje = document.getElementById('form-mensaje');
-    const successElement = document.createElement('div');
+    const n = document.createElement('div');
 
     const nombreElemento =document.createElement('p');
     nombreElemento.textContent= 'Nombre: ' + nombre;
-    succesElement.appendChild(nombreElemento);
+    n.appendChild(nombreElemento);
 
     const mailElemento = document.createElement('p');
     mailElemento.textContent = 'Email: ' + mail;
-    successElement.appendChild(mailElemento);
+    n.appendChild(mailElemento);
 
     const mensajeElemento = document.createElement('p');
     mensajeElemento.textContent = 'Mensaje: ' + mensaje;
-    successElement.appendChild(mensajeElemento);
+    n.appendChild(mensajeElemento);
 
-    formMensaje.appendChild(successElement);
+    formMensaje.appendChild(n);
+    limpiarFormulario()
 }
+
+function limpiarFormulario() {
+   if(esvalido=true){
+    
+    formulario.reset();
+
+   }}
+
 });
