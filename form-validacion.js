@@ -5,7 +5,6 @@ document.getElementById('formulario').addEventListener('submit', function(event)
 event.preventDefault();
 
 const formulario = document.getElementById('formulario')
-//formulario.innerHTML='';
 const nombre = document.getElementById('nombre').value.trim();
 const mail = document.getElementById('mail').value.trim();
 const mensaje = document.getElementById('mensaje').value.trim();
@@ -18,7 +17,7 @@ if(!validarnombre(nombre)){
 }
 
 if(!validarmail(mail)){
-    error('El mail no es valido.)')
+    error('El mail no es valido.')
     esvalido=false;
 }
 
@@ -48,10 +47,10 @@ function validarmensaje(mensaje){
 
 function error(mensaje){
     const formMensaje = document.getElementById('form-mensaje');
-    const errorElement = document.createElement('p');
-    errorElement.style.color = "red";
-    errorElement.textContent = mensaje;
-    formMensaje.appendChild(errorElement);
+    const errorElemento = document.createElement('p');
+    errorElemento.style.color = "green";
+    errorElemento.textContent = mensaje;
+    formMensaje.appendChild(errorElemento);
 }
 
 function displaySuccess(nombre, mail, mensaje) {
