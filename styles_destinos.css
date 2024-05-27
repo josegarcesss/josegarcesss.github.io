@@ -31,12 +31,14 @@ article{
 #regresar{
     display: flex;
     justify-content: center;
-}
-
-#regresar{
     text-decoration: none;
     background-color: black;
     color: beige;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 5px;
 }
+
+a:hover {
+    padding: 2px;
+    border-style: solid;
+  }
