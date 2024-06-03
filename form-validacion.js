@@ -64,7 +64,7 @@ function error(mensaje) {
     erroresDiv.appendChild(errorElemento);
 }
 
-function displaySuccess(nombre, asunto, mail, mensaje) {
+function displaySuccess(nombre, mail, asunto, mensaje) {
     const formMensaje = document.getElementById('form-mensaje');
     formMensaje.innerHTML = ''; // Limpiar mensajes anteriores
 
@@ -73,14 +73,13 @@ function displaySuccess(nombre, asunto, mail, mensaje) {
     const nombreElemento = document.createElement('p');
     nombreElemento.textContent = 'Nombre: ' + nombre;
     n.appendChild(nombreElemento);
+    const mailElemento = document.createElement('p');
+    mailElemento.textContent = 'Email: ' + mail;
+    n.appendChild(mailElemento);
 
     const asuntoElemento = document.createElement('p');
     asuntoElemento.textContent = 'Asunto: ' + asunto;
     n.appendChild(asuntoElemento);
-
-    const mailElemento = document.createElement('p');
-    mailElemento.textContent = 'Email: ' + mail;
-    n.appendChild(mailElemento);
 
     const mensajeElemento = document.createElement('p');
     mensajeElemento.textContent = 'Mensaje: ' + mensaje;
