@@ -9,9 +9,9 @@ const mail = document.getElementById('mail').value.trim();
 const sucursal = document.getElementById('sucursal').value.trim();
 const mensaje = document.getElementById('mensaje').value.trim();
 
-let esvalido=true;
-
 limpiarErrores();
+limpiarMensajes();
+let esvalido=true;
 if(!validarnombre(nombre)){
     error('Ingrese un nombre (no mayor a 30 caracteres)')
     esvalido=false;
@@ -48,8 +48,8 @@ function validarmail(mail){
 }
 
 function validarsucursal(sucursal){
-    //sucursal.validity.rangeOverflow || sucursal.validity.rangeUnderflow
-    return sucursal<1 || sucursal>3 ;
+    const sucursalNum= parseInt(sucursal);
+    return sucursalNum >=1 && sucursalNum<=3;
 }
 
 function validarmensaje(mensaje){
@@ -67,6 +67,7 @@ function error(mensaje) {
 
 function displaySuccess(nombre, mail, sucursal, mensaje) {
     const formMensaje = document.getElementById('form-mensaje');
+    limpiarErrores()
     formMensaje.innerHTML = ''; // Limpiar mensajes anteriores
 
     const n = document.createElement('div');
@@ -94,6 +95,10 @@ function limpiarFormulario(){
 }
 
 function limpiarErrores() {
-    document.getElementById('errores').innerHTML = ''; 
+    document.getElementById('errores').innerHTML=''; 
+}
+
+function limpiarMensajes(){
+    document.getElementById('form-mensaje').innerHTML='';
 }
 });
