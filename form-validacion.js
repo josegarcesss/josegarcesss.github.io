@@ -6,7 +6,7 @@ event.preventDefault();
 const formulario = document.getElementById('formulario');
 const nombre = document.getElementById('nombre').value.trim();
 const mail = document.getElementById('mail').value.trim();
-const asunto = document.getElementById('asunto').value.trim();
+const sucursal = document.getElementById('sucursal').value.trim();
 const mensaje = document.getElementById('mensaje').value.trim();
 
 let esvalido=true;
@@ -22,8 +22,8 @@ if(!validarmail(mail)){
     esvalido=false;
 }
 
-if(!validarasunto(asunto)){
-    error('Ingrese un asunto (no mayor a 50 caracteres)');
+if(!validarsucursal(sucursal)){
+    error('Elija una de las 3 sucursales');
     esvalido=false;
 }
 
@@ -33,7 +33,7 @@ if(!validarmensaje(mensaje)){
 }
 
 if(esvalido){
-    displaySuccess(nombre, mail, asunto, mensaje);
+    displaySuccess(nombre, mail, sucursal, mensaje);
     limpiarFormulario();
 }
 });
@@ -47,8 +47,9 @@ function validarmail(mail){
     return emailRegex.test(mail);
 }
 
-function validarasunto(asunto){
-    return asunto.length > 0 && asunto.length <=50;
+function validarsucursal(sucursal){
+    //sucursal.validity.rangeOverflow || sucursal.validity.rangeUnderflow
+    return sucursal<1 || sucursal>3 ;
 }
 
 function validarmensaje(mensaje){
@@ -64,7 +65,7 @@ function error(mensaje) {
     erroresDiv.appendChild(errorElemento);
 }
 
-function displaySuccess(nombre, mail, asunto, mensaje) {
+function displaySuccess(nombre, mail, sucursal, mensaje) {
     const formMensaje = document.getElementById('form-mensaje');
     formMensaje.innerHTML = ''; // Limpiar mensajes anteriores
 
@@ -77,9 +78,9 @@ function displaySuccess(nombre, mail, asunto, mensaje) {
     mailElemento.textContent = 'Email: ' + mail;
     n.appendChild(mailElemento);
 
-    const asuntoElemento = document.createElement('p');
-    asuntoElemento.textContent = 'Asunto: ' + asunto;
-    n.appendChild(asuntoElemento);
+    const sucursalElemento = document.createElement('p');
+    sucursalElemento.textContent = 'Sucursal: ' + sucursal;
+    n.appendChild(sucursalElemento);
 
     const mensajeElemento = document.createElement('p');
     mensajeElemento.textContent = 'Mensaje: ' + mensaje;
